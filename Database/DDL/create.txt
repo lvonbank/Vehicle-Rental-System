@@ -1,0 +1,163 @@
+USE VehicleRental;
+
+-- -----------------------
+-- Create Customer table
+-- -----------------------
+CREATE TABLE Customer
+(
+  Cust_ID      Char(10)    NOT NULL,
+  FirstName    Varchar(35) NOT NULL,
+  MiddleName   Varchar(35) NULL,
+  LastName     Varchar(35) NOT NULL,
+  Status       Varchar(10) NULL,
+  Gender       Char(10)    NULL,
+  DOB          Varchar(10) NOT NULL,
+  Email        Varchar(35) NULL,
+  PhoneNum     Char(15)    NULL,
+  Discount_ID  Char(10)    NULL,
+  Address_ID   Char(10)    NOT NULL,
+  LicenceNum   Char(25)    NOT NULL,
+  InsuranceNum Char(25)    NULL
+);
+
+-- ------------------------
+-- Create Discount table
+-- ------------------------
+CREATE TABLE Discount
+(
+  Discount_ID Char(10)     NOT NULL,
+  Discount    Decimal(3,2) NOT NULL
+);
+
+-- --------------------
+-- Create Billing table
+-- --------------------
+CREATE TABLE Billing
+(
+  Bill_ID       Char(10)     NOT NULL,
+  TotalAmount   Decimal(9,2) NULL,
+  BillDate      DateTime     NOT NULL,
+  BillStatus    Char(10)     NOT NULL,
+  AmountTax     Decimal(9,2) NULL,
+  AmountBalance Decimal(9,2) NULL, 
+  AmountAdvance Decimal(9,2) NULL,
+  Discount_ID   Char(10)     NULL,
+  Cust_ID       Char(10)     NOT NULL,
+  Location_ID   Char(10)     NOT NULL
+);
+
+-- ----------------------
+-- Create Payment table
+-- ----------------------
+CREATE TABLE Payment
+(
+  Payment_ID     Char(10) NOT NULL,
+  PaymentType    Char(10) NOT NULL,
+  TransactionNum Char(10) NOT NULL,
+  Cust_ID        Char(10) NOT NULL,
+  Bill_ID        Char(10) NOT NULL
+);
+
+-- ---------------------
+-- Create Booking table
+-- ---------------------
+CREATE TABLE Booking
+(
+  Book_ID         Char(10)     NOT NULL,
+  StartDate       DateTime     NOT NULL,
+  EndDate         DateTime     NOT NULL,
+  SecurityDeposit Decimal(9,2) NULL,
+  BookStatus      Char(10)     NOT NULL,
+  VIN             Char(17)     NOT NULL,
+  Bill_ID         Char(10)     NOT NULL
+);
+
+-- ---------------------
+-- Create Location table
+-- ---------------------
+CREATE TABLE Location
+(
+  Location_ID Char(10) NOT NULL,
+  PhoneNum    Char(15) NULL,
+  Address_ID  Char(10) NOT NULL
+);
+
+-- ---------------------
+-- Create Address table
+-- ---------------------
+CREATE TABLE Address
+(
+  Address_ID Char(10)    NOT NULL,
+  Street     Varchar(35) NOT NULL,
+  City       Varchar(35) NOT NULL,
+  Region     Varchar(25) NOT NULL,
+  Country    Varchar(25) NOT NULL,
+  Zip        Char(10)    NOT NULL
+);
+
+-- ---------------------
+-- Create InStock table
+-- ---------------------
+CREATE TABLE InStock
+(
+  VIN         Char(17) NOT NULL,
+  Location_ID Char(10) NOT NULL,   
+  Avalible    Char(10) NOT NULL
+);
+
+-- ---------------------
+-- Create Vehicle table
+-- ---------------------
+CREATE TABLE Vehicle
+(
+  VIN             Char(17)     NOT NULL,
+  Year            Date         NOT NULL,
+  Make            Varchar(25)  NOT NULL,
+  Model           Varchar(25)  NOT NULL,
+  Mileage         Decimal(9,2) NOT NULL,
+  Type            Varchar(25)  NOT NULL,
+  DriveTrain      Char(10)     NOT NULL,
+  CostPerMile     Decimal(9,2) NOT NULL,
+  RegistrationNum Char(25)     NOT NULL
+);
+
+-- --------------------
+-- Define primary keys
+-- --------------------
+ALTER TABLE Customer ADD CONSTRAINT PK_Customer PRIMARY KEY CLUSTERED (Cust_ID);
+ALTER TABLE Discount ADD CONSTRAINT PK_Discount PRIMARY KEY CLUSTERED (Discount_ID);
+ALTER TABLE Billing ADD CONSTRAINT PK_Billing PRIMARY KEY CLUSTERED (Bill_ID);
+ALTER TABLE Location ADD CONSTRAINT PK_Location PRIMARY KEY CLUSTERED (Location_ID);
+ALTER TABLE Address ADD CONSTRAINT PK_Address PRIMARY KEY CLUSTERED (Address_ID);
+ALTER TABLE Payment ADD CONSTRAINT PK_Payment PRIMARY KEY NONCLUSTERED (Payment_ID);
+ALTER TABLE Booking ADD CONSTRAINT PK_Booking PRIMARY KEY CLUSTERED (Book_ID);
+ALTER TABLE Vehicle ADD CONSTRAINT PK_Vehicle PRIMARY KEY CLUSTERED (VIN);
+ALTER TABLE InStock ADD CONSTRAINT PK_InStock PRIMARY KEY CLUSTERED (VIN, Location_ID);
+
+-- --------------------
+-- Define foreign keys
+-- --------------------
+ALTER TABLE Customer ADD
+CONSTRAINT FK_Customer_Discount FOREIGN KEY (Discount_ID) REFERENCES Discount (Discount_ID);
+ALTER TABLE Customer ADD
+CONSTRAINT FK_Customer_Address FOREIGN KEY (Address_ID) REFERENCES Address (Address_ID);
+ALTER TABLE Billing ADD
+CONSTRAINT FK_Billing_Discount FOREIGN KEY (Discount_ID) REFERENCES Discount (Discount_ID);
+ALTER TABLE Billing ADD
+CONSTRAINT FK_Billing_Customer FOREIGN KEY (Cust_ID) REFERENCES Customer (Cust_ID);
+ALTER TABLE Billing ADD
+CONSTRAINT FK_Billing_Location FOREIGN KEY (Location_ID) REFERENCES Location (Location_ID);
+ALTER TABLE Location ADD
+CONSTRAINT FK_Location_Address FOREIGN KEY (Address_ID) REFERENCES Address (Address_ID);
+ALTER TABLE Payment ADD
+CONSTRAINT FK_Payment_Customer FOREIGN KEY (Cust_ID) REFERENCES Customer (Cust_ID);
+ALTER TABLE Payment ADD
+CONSTRAINT FK_Payment_Billing FOREIGN KEY (Bill_ID) REFERENCES Billing (Bill_ID);
+ALTER TABLE Booking ADD
+CONSTRAINT FK_Booking_Vehicle FOREIGN KEY (VIN) REFERENCES Vehicle (VIN);
+ALTER TABLE Booking ADD
+CONSTRAINT FK_Booking_Billing FOREIGN KEY (Bill_ID) REFERENCES Billing (Bill_ID);
+ALTER TABLE InStock ADD
+CONSTRAINT FK_InStock_Vehicle FOREIGN KEY (VIN) REFERENCES Vehicle (VIN);
+ALTER TABLE InStock ADD
+CONSTRAINT FK_InStock_Location FOREIGN KEY (Location_ID) REFERENCES Location (Location_ID);

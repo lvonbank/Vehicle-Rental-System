@@ -1,0 +1,275 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel booking search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN Book_ID_fieldblock}		
+	<div class="container {$fielddispclass_Book_ID}" data-fieldname="Book_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Book_ID}">
+				{$label booking Book_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Book_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Book_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Book_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Book_ID_fieldblock}
+	{BEGIN StartDate_fieldblock}		
+	<div class="container {$fielddispclass_StartDate}" data-fieldname="StartDate">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_StartDate}">
+				{$label booking StartDate}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_StartDate}
+			</div>
+			<div class="col-md-4" >
+				{$StartDate_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$StartDate_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END StartDate_fieldblock}
+	{BEGIN EndDate_fieldblock}		
+	<div class="container {$fielddispclass_EndDate}" data-fieldname="EndDate">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_EndDate}">
+				{$label booking EndDate}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_EndDate}
+			</div>
+			<div class="col-md-4" >
+				{$EndDate_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$EndDate_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END EndDate_fieldblock}
+	{BEGIN SecurityDeposit_fieldblock}		
+	<div class="container {$fielddispclass_SecurityDeposit}" data-fieldname="SecurityDeposit">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_SecurityDeposit}">
+				{$label booking SecurityDeposit}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_SecurityDeposit}
+			</div>
+			<div class="col-md-4" >
+				{$SecurityDeposit_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SecurityDeposit_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SecurityDeposit_fieldblock}
+	{BEGIN BookStatus_fieldblock}		
+	<div class="container {$fielddispclass_BookStatus}" data-fieldname="BookStatus">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_BookStatus}">
+				{$label booking BookStatus}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_BookStatus}
+			</div>
+			<div class="col-md-4" >
+				{$BookStatus_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BookStatus_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BookStatus_fieldblock}
+	{BEGIN VIN_fieldblock}		
+	<div class="container {$fielddispclass_VIN}" data-fieldname="VIN">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_VIN}">
+				{$label booking VIN}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_VIN}
+			</div>
+			<div class="col-md-4" >
+				{$VIN_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$VIN_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END VIN_fieldblock}
+	{BEGIN Bill_ID_fieldblock}		
+	<div class="container {$fielddispclass_Bill_ID}" data-fieldname="Bill_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Bill_ID}">
+				{$label booking Bill_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Bill_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Bill_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Bill_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Bill_ID_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel customer masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$Cust_ID_class}">{$label customer Cust_ID}</th>
+			<th class="{$FirstName_class}">{$label customer FirstName}</th>
+			<th class="{$MiddleName_class}">{$label customer MiddleName}</th>
+			<th class="{$LastName_class}">{$label customer LastName}</th>
+			<th class="{$Status_class}">{$label customer Status}</th>
+			<th class="{$Gender_class}">{$label customer Gender}</th>
+			<th class="{$DOB_class}">{$label customer DOB}</th>
+			<th class="{$Email_class}">{$label customer Email}</th>
+			<th class="{$PhoneNum_class}">{$label customer PhoneNum}</th>
+			<th class="{$Discount_ID_class}">{$label customer Discount_ID}</th>
+			<th class="{$Address_ID_class}">{$label customer Address_ID}</th>
+			<th class="{$LicenceNum_class}">{$label customer LicenceNum}</th>
+			<th class="{$InsuranceNum_class}">{$label customer InsuranceNum}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$Cust_ID_class}">{$Cust_ID_mastervalue}</td>
+			<td class="{$FirstName_class}">{$FirstName_mastervalue}</td>
+			<td class="{$MiddleName_class}">{$MiddleName_mastervalue}</td>
+			<td class="{$LastName_class}">{$LastName_mastervalue}</td>
+			<td class="{$Status_class}">{$Status_mastervalue}</td>
+			<td class="{$Gender_class}">{$Gender_mastervalue}</td>
+			<td class="{$DOB_class}">{$DOB_mastervalue}</td>
+			<td class="{$Email_class}">{$Email_mastervalue}</td>
+			<td class="{$PhoneNum_class}">{$PhoneNum_mastervalue}</td>
+			<td class="{$Discount_ID_class}">{$Discount_ID_mastervalue}</td>
+			<td class="{$Address_ID_class}">{$Address_ID_mastervalue}</td>
+			<td class="{$LicenceNum_class}">{$LicenceNum_mastervalue}</td>
+			<td class="{$InsuranceNum_class}">{$InsuranceNum_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,288 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel customer print}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN Cust_ID_fieldheadercolumn}
+			<th class="{$Cust_ID_class}" {$Cust_ID_style}  data-field="Cust_ID">
+				{$label customer Cust_ID}
+			</th>
+			{END Cust_ID_fieldheadercolumn}
+			{BEGIN FirstName_fieldheadercolumn}
+			<th class="{$FirstName_class}" {$FirstName_style}  data-field="FirstName">
+				{$label customer FirstName}
+			</th>
+			{END FirstName_fieldheadercolumn}
+			{BEGIN MiddleName_fieldheadercolumn}
+			<th class="{$MiddleName_class}" {$MiddleName_style}  data-field="MiddleName">
+				{$label customer MiddleName}
+			</th>
+			{END MiddleName_fieldheadercolumn}
+			{BEGIN LastName_fieldheadercolumn}
+			<th class="{$LastName_class}" {$LastName_style}  data-field="LastName">
+				{$label customer LastName}
+			</th>
+			{END LastName_fieldheadercolumn}
+			{BEGIN Status_fieldheadercolumn}
+			<th class="{$Status_class}" {$Status_style}  data-field="Status">
+				{$label customer Status}
+			</th>
+			{END Status_fieldheadercolumn}
+			{BEGIN Gender_fieldheadercolumn}
+			<th class="{$Gender_class}" {$Gender_style}  data-field="Gender">
+				{$label customer Gender}
+			</th>
+			{END Gender_fieldheadercolumn}
+			{BEGIN DOB_fieldheadercolumn}
+			<th class="{$DOB_class}" {$DOB_style}  data-field="DOB">
+				{$label customer DOB}
+			</th>
+			{END DOB_fieldheadercolumn}
+			{BEGIN Email_fieldheadercolumn}
+			<th class="{$Email_class}" {$Email_style}  data-field="Email">
+				{$label customer Email}
+			</th>
+			{END Email_fieldheadercolumn}
+			{BEGIN PhoneNum_fieldheadercolumn}
+			<th class="{$PhoneNum_class}" {$PhoneNum_style}  data-field="PhoneNum">
+				{$label customer PhoneNum}
+			</th>
+			{END PhoneNum_fieldheadercolumn}
+			{BEGIN Discount_ID_fieldheadercolumn}
+			<th class="{$Discount_ID_class}" {$Discount_ID_style}  data-field="Discount_ID">
+				{$label customer Discount_ID}
+			</th>
+			{END Discount_ID_fieldheadercolumn}
+			{BEGIN Address_ID_fieldheadercolumn}
+			<th class="{$Address_ID_class}" {$Address_ID_style}  data-field="Address_ID">
+				{$label customer Address_ID}
+			</th>
+			{END Address_ID_fieldheadercolumn}
+			{BEGIN LicenceNum_fieldheadercolumn}
+			<th class="{$LicenceNum_class}" {$LicenceNum_style}  data-field="LicenceNum">
+				{$label customer LicenceNum}
+			</th>
+			{END LicenceNum_fieldheadercolumn}
+			{BEGIN InsuranceNum_fieldheadercolumn}
+			<th class="{$InsuranceNum_class}" {$InsuranceNum_style}  data-field="InsuranceNum">
+				{$label customer InsuranceNum}
+			</th>
+			{END InsuranceNum_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN Cust_ID_fieldcolumn}
+			<td  class="{$Cust_ID_class}" {$Cust_ID_style} {$recordattrs}>
+				{$Cust_ID_value}
+			</td>
+			{END Cust_ID_fieldcolumn}
+			{BEGIN FirstName_fieldcolumn}
+			<td  class="{$FirstName_class}" {$FirstName_style} {$recordattrs}>
+				{$FirstName_value}
+			</td>
+			{END FirstName_fieldcolumn}
+			{BEGIN MiddleName_fieldcolumn}
+			<td  class="{$MiddleName_class}" {$MiddleName_style} {$recordattrs}>
+				{$MiddleName_value}
+			</td>
+			{END MiddleName_fieldcolumn}
+			{BEGIN LastName_fieldcolumn}
+			<td  class="{$LastName_class}" {$LastName_style} {$recordattrs}>
+				{$LastName_value}
+			</td>
+			{END LastName_fieldcolumn}
+			{BEGIN Status_fieldcolumn}
+			<td  class="{$Status_class}" {$Status_style} {$recordattrs}>
+				{$Status_value}
+			</td>
+			{END Status_fieldcolumn}
+			{BEGIN Gender_fieldcolumn}
+			<td  class="{$Gender_class}" {$Gender_style} {$recordattrs}>
+				{$Gender_value}
+			</td>
+			{END Gender_fieldcolumn}
+			{BEGIN DOB_fieldcolumn}
+			<td  class="{$DOB_class}" {$DOB_style} {$recordattrs}>
+				{$DOB_value}
+			</td>
+			{END DOB_fieldcolumn}
+			{BEGIN Email_fieldcolumn}
+			<td  class="{$Email_class}" {$Email_style} {$recordattrs}>
+				{$Email_value}
+			</td>
+			{END Email_fieldcolumn}
+			{BEGIN PhoneNum_fieldcolumn}
+			<td  class="{$PhoneNum_class}" {$PhoneNum_style} {$recordattrs}>
+				{$PhoneNum_value}
+			</td>
+			{END PhoneNum_fieldcolumn}
+			{BEGIN Discount_ID_fieldcolumn}
+			<td  class="{$Discount_ID_class}" {$Discount_ID_style} {$recordattrs}>
+				{$Discount_ID_value}
+			</td>
+			{END Discount_ID_fieldcolumn}
+			{BEGIN Address_ID_fieldcolumn}
+			<td  class="{$Address_ID_class}" {$Address_ID_style} {$recordattrs}>
+				{$Address_ID_value}
+			</td>
+			{END Address_ID_fieldcolumn}
+			{BEGIN LicenceNum_fieldcolumn}
+			<td  class="{$LicenceNum_class}" {$LicenceNum_style} {$recordattrs}>
+				{$LicenceNum_value}
+			</td>
+			{END LicenceNum_fieldcolumn}
+			{BEGIN InsuranceNum_fieldcolumn}
+			<td  class="{$InsuranceNum_class}" {$InsuranceNum_style} {$recordattrs}>
+				{$InsuranceNum_value}
+			</td>
+			{END InsuranceNum_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="14">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

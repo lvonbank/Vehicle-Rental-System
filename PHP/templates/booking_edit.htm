@@ -1,0 +1,342 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel booking edit}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN Book_ID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Book_ID}" data-fieldname="Book_ID" data-signal-error-for="Book_ID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Book_ID}">
+		{BEGIN Book_ID_label}{$label booking Book_ID}{END Book_ID_label}
+	</label>
+	<div class="col-md-6" >
+		{$Book_ID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Book_ID">
+		<div class="text-muted" >
+		{$tooltip booking Book_ID}
+		</div>
+	</div>
+</div>
+</div>
+{END Book_ID_fieldblock}
+
+			{BEGIN StartDate_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_StartDate}" data-fieldname="StartDate" data-signal-error-for="StartDate{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_StartDate}">
+		{BEGIN StartDate_label}{$label booking StartDate}{END StartDate_label}
+	</label>
+	<div class="col-md-6" >
+		{$StartDate_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="StartDate">
+		<div class="text-muted" >
+		{$tooltip booking StartDate}
+		</div>
+	</div>
+</div>
+</div>
+{END StartDate_fieldblock}
+
+			{BEGIN EndDate_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_EndDate}" data-fieldname="EndDate" data-signal-error-for="EndDate{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_EndDate}">
+		{BEGIN EndDate_label}{$label booking EndDate}{END EndDate_label}
+	</label>
+	<div class="col-md-6" >
+		{$EndDate_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="EndDate">
+		<div class="text-muted" >
+		{$tooltip booking EndDate}
+		</div>
+	</div>
+</div>
+</div>
+{END EndDate_fieldblock}
+
+			{BEGIN SecurityDeposit_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SecurityDeposit}" data-fieldname="SecurityDeposit" data-signal-error-for="SecurityDeposit{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SecurityDeposit}">
+		{BEGIN SecurityDeposit_label}{$label booking SecurityDeposit}{END SecurityDeposit_label}
+	</label>
+	<div class="col-md-6" >
+		{$SecurityDeposit_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SecurityDeposit">
+		<div class="text-muted" >
+		{$tooltip booking SecurityDeposit}
+		</div>
+	</div>
+</div>
+</div>
+{END SecurityDeposit_fieldblock}
+
+			{BEGIN BookStatus_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_BookStatus}" data-fieldname="BookStatus" data-signal-error-for="BookStatus{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_BookStatus}">
+		{BEGIN BookStatus_label}{$label booking BookStatus}{END BookStatus_label}
+	</label>
+	<div class="col-md-6" >
+		{$BookStatus_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="BookStatus">
+		<div class="text-muted" >
+		{$tooltip booking BookStatus}
+		</div>
+	</div>
+</div>
+</div>
+{END BookStatus_fieldblock}
+
+			{BEGIN VIN_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_VIN}" data-fieldname="VIN" data-signal-error-for="VIN{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_VIN}">
+		{BEGIN VIN_label}{$label booking VIN}{END VIN_label}
+	</label>
+	<div class="col-md-6" >
+		{$VIN_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="VIN">
+		<div class="text-muted" >
+		{$tooltip booking VIN}
+		</div>
+	</div>
+</div>
+</div>
+{END VIN_fieldblock}
+
+			{BEGIN Bill_ID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Bill_ID}" data-fieldname="Bill_ID" data-signal-error-for="Bill_ID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Bill_ID}">
+		{BEGIN Bill_ID_label}{$label booking Bill_ID}{END Bill_ID_label}
+	</label>
+	<div class="col-md-6" >
+		{$Bill_ID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Bill_ID">
+		<div class="text-muted" >
+		{$tooltip booking Bill_ID}
+		</div>
+	</div>
+</div>
+</div>
+{END Bill_ID_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>Cancel</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>Reset</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>View</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

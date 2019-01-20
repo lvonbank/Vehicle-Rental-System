@@ -1,0 +1,383 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel customer search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN Cust_ID_fieldblock}		
+	<div class="container {$fielddispclass_Cust_ID}" data-fieldname="Cust_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Cust_ID}">
+				{$label customer Cust_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Cust_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Cust_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Cust_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Cust_ID_fieldblock}
+	{BEGIN FirstName_fieldblock}		
+	<div class="container {$fielddispclass_FirstName}" data-fieldname="FirstName">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_FirstName}">
+				{$label customer FirstName}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_FirstName}
+			</div>
+			<div class="col-md-4" >
+				{$FirstName_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FirstName_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FirstName_fieldblock}
+	{BEGIN MiddleName_fieldblock}		
+	<div class="container {$fielddispclass_MiddleName}" data-fieldname="MiddleName">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_MiddleName}">
+				{$label customer MiddleName}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_MiddleName}
+			</div>
+			<div class="col-md-4" >
+				{$MiddleName_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$MiddleName_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END MiddleName_fieldblock}
+	{BEGIN LastName_fieldblock}		
+	<div class="container {$fielddispclass_LastName}" data-fieldname="LastName">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_LastName}">
+				{$label customer LastName}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_LastName}
+			</div>
+			<div class="col-md-4" >
+				{$LastName_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LastName_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LastName_fieldblock}
+	{BEGIN Status_fieldblock}		
+	<div class="container {$fielddispclass_Status}" data-fieldname="Status">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Status}">
+				{$label customer Status}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Status}
+			</div>
+			<div class="col-md-4" >
+				{$Status_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Status_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Status_fieldblock}
+	{BEGIN Gender_fieldblock}		
+	<div class="container {$fielddispclass_Gender}" data-fieldname="Gender">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Gender}">
+				{$label customer Gender}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Gender}
+			</div>
+			<div class="col-md-4" >
+				{$Gender_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Gender_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Gender_fieldblock}
+	{BEGIN DOB_fieldblock}		
+	<div class="container {$fielddispclass_DOB}" data-fieldname="DOB">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DOB}">
+				{$label customer DOB}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DOB}
+			</div>
+			<div class="col-md-4" >
+				{$DOB_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DOB_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DOB_fieldblock}
+	{BEGIN Email_fieldblock}		
+	<div class="container {$fielddispclass_Email}" data-fieldname="Email">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Email}">
+				{$label customer Email}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Email}
+			</div>
+			<div class="col-md-4" >
+				{$Email_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Email_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Email_fieldblock}
+	{BEGIN PhoneNum_fieldblock}		
+	<div class="container {$fielddispclass_PhoneNum}" data-fieldname="PhoneNum">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_PhoneNum}">
+				{$label customer PhoneNum}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_PhoneNum}
+			</div>
+			<div class="col-md-4" >
+				{$PhoneNum_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PhoneNum_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PhoneNum_fieldblock}
+	{BEGIN Discount_ID_fieldblock}		
+	<div class="container {$fielddispclass_Discount_ID}" data-fieldname="Discount_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Discount_ID}">
+				{$label customer Discount_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Discount_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Discount_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Discount_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Discount_ID_fieldblock}
+	{BEGIN Address_ID_fieldblock}		
+	<div class="container {$fielddispclass_Address_ID}" data-fieldname="Address_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Address_ID}">
+				{$label customer Address_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Address_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Address_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Address_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Address_ID_fieldblock}
+	{BEGIN LicenceNum_fieldblock}		
+	<div class="container {$fielddispclass_LicenceNum}" data-fieldname="LicenceNum">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_LicenceNum}">
+				{$label customer LicenceNum}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_LicenceNum}
+			</div>
+			<div class="col-md-4" >
+				{$LicenceNum_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LicenceNum_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LicenceNum_fieldblock}
+	{BEGIN InsuranceNum_fieldblock}		
+	<div class="container {$fielddispclass_InsuranceNum}" data-fieldname="InsuranceNum">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_InsuranceNum}">
+				{$label customer InsuranceNum}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_InsuranceNum}
+			</div>
+			<div class="col-md-4" >
+				{$InsuranceNum_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$InsuranceNum_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END InsuranceNum_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

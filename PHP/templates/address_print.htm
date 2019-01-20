@@ -1,0 +1,197 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel address print}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN Address_ID_fieldheadercolumn}
+			<th class="{$Address_ID_class}" {$Address_ID_style}  data-field="Address_ID">
+				{$label address Address_ID}
+			</th>
+			{END Address_ID_fieldheadercolumn}
+			{BEGIN Street_fieldheadercolumn}
+			<th class="{$Street_class}" {$Street_style}  data-field="Street">
+				{$label address Street}
+			</th>
+			{END Street_fieldheadercolumn}
+			{BEGIN City_fieldheadercolumn}
+			<th class="{$City_class}" {$City_style}  data-field="City">
+				{$label address City}
+			</th>
+			{END City_fieldheadercolumn}
+			{BEGIN Region_fieldheadercolumn}
+			<th class="{$Region_class}" {$Region_style}  data-field="Region">
+				{$label address Region}
+			</th>
+			{END Region_fieldheadercolumn}
+			{BEGIN Country_fieldheadercolumn}
+			<th class="{$Country_class}" {$Country_style}  data-field="Country">
+				{$label address Country}
+			</th>
+			{END Country_fieldheadercolumn}
+			{BEGIN Zip_fieldheadercolumn}
+			<th class="{$Zip_class}" {$Zip_style}  data-field="Zip">
+				{$label address Zip}
+			</th>
+			{END Zip_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN Address_ID_fieldcolumn}
+			<td  class="{$Address_ID_class}" {$Address_ID_style} {$recordattrs}>
+				{$Address_ID_value}
+			</td>
+			{END Address_ID_fieldcolumn}
+			{BEGIN Street_fieldcolumn}
+			<td  class="{$Street_class}" {$Street_style} {$recordattrs}>
+				{$Street_value}
+			</td>
+			{END Street_fieldcolumn}
+			{BEGIN City_fieldcolumn}
+			<td  class="{$City_class}" {$City_style} {$recordattrs}>
+				{$City_value}
+			</td>
+			{END City_fieldcolumn}
+			{BEGIN Region_fieldcolumn}
+			<td  class="{$Region_class}" {$Region_style} {$recordattrs}>
+				{$Region_value}
+			</td>
+			{END Region_fieldcolumn}
+			{BEGIN Country_fieldcolumn}
+			<td  class="{$Country_class}" {$Country_style} {$recordattrs}>
+				{$Country_value}
+			</td>
+			{END Country_fieldcolumn}
+			{BEGIN Zip_fieldcolumn}
+			<td  class="{$Zip_class}" {$Zip_style} {$recordattrs}>
+				{$Zip_value}
+			</td>
+			{END Zip_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="7">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

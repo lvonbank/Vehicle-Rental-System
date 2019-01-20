@@ -1,0 +1,105 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">Back to {$backtomasterlink_caption}</a><span>{$pagetitlelabel customer masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=Cust_ID]:before {
+		content: "{$label customer Cust_ID}";
+	}
+	.bs-gridcell[data-field=FirstName]:before {
+		content: "{$label customer FirstName}";
+	}
+	.bs-gridcell[data-field=MiddleName]:before {
+		content: "{$label customer MiddleName}";
+	}
+	.bs-gridcell[data-field=LastName]:before {
+		content: "{$label customer LastName}";
+	}
+	.bs-gridcell[data-field=Status]:before {
+		content: "{$label customer Status}";
+	}
+	.bs-gridcell[data-field=Gender]:before {
+		content: "{$label customer Gender}";
+	}
+	.bs-gridcell[data-field=DOB]:before {
+		content: "{$label customer DOB}";
+	}
+	.bs-gridcell[data-field=Email]:before {
+		content: "{$label customer Email}";
+	}
+	.bs-gridcell[data-field=PhoneNum]:before {
+		content: "{$label customer PhoneNum}";
+	}
+	.bs-gridcell[data-field=Discount_ID]:before {
+		content: "{$label customer Discount_ID}";
+	}
+	.bs-gridcell[data-field=Address_ID]:before {
+		content: "{$label customer Address_ID}";
+	}
+	.bs-gridcell[data-field=LicenceNum]:before {
+		content: "{$label customer LicenceNum}";
+	}
+	.bs-gridcell[data-field=InsuranceNum]:before {
+		content: "{$label customer InsuranceNum}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$Cust_ID_class}">{$label customer Cust_ID}</th>
+			<th class="{$FirstName_class}">{$label customer FirstName}</th>
+			<th class="{$MiddleName_class}">{$label customer MiddleName}</th>
+			<th class="{$LastName_class}">{$label customer LastName}</th>
+			<th class="{$Status_class}">{$label customer Status}</th>
+			<th class="{$Gender_class}">{$label customer Gender}</th>
+			<th class="{$DOB_class}">{$label customer DOB}</th>
+			<th class="{$Email_class}">{$label customer Email}</th>
+			<th class="{$PhoneNum_class}">{$label customer PhoneNum}</th>
+			<th class="{$Discount_ID_class}">{$label customer Discount_ID}</th>
+			<th class="{$Address_ID_class}">{$label customer Address_ID}</th>
+			<th class="{$LicenceNum_class}">{$label customer LicenceNum}</th>
+			<th class="{$InsuranceNum_class}">{$label customer InsuranceNum}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$Cust_ID_class} bs-gridcell" data-field=Cust_ID>{$Cust_ID_mastervalue}</td>
+			<td class="{$FirstName_class} bs-gridcell" data-field=FirstName>{$FirstName_mastervalue}</td>
+			<td class="{$MiddleName_class} bs-gridcell" data-field=MiddleName>{$MiddleName_mastervalue}</td>
+			<td class="{$LastName_class} bs-gridcell" data-field=LastName>{$LastName_mastervalue}</td>
+			<td class="{$Status_class} bs-gridcell" data-field=Status>{$Status_mastervalue}</td>
+			<td class="{$Gender_class} bs-gridcell" data-field=Gender>{$Gender_mastervalue}</td>
+			<td class="{$DOB_class} bs-gridcell" data-field=DOB>{$DOB_mastervalue}</td>
+			<td class="{$Email_class} bs-gridcell" data-field=Email>{$Email_mastervalue}</td>
+			<td class="{$PhoneNum_class} bs-gridcell" data-field=PhoneNum>{$PhoneNum_mastervalue}</td>
+			<td class="{$Discount_ID_class} bs-gridcell" data-field=Discount_ID>{$Discount_ID_mastervalue}</td>
+			<td class="{$Address_ID_class} bs-gridcell" data-field=Address_ID>{$Address_ID_mastervalue}</td>
+			<td class="{$LicenceNum_class} bs-gridcell" data-field=LicenceNum>{$LicenceNum_mastervalue}</td>
+			<td class="{$InsuranceNum_class} bs-gridcell" data-field=InsuranceNum>{$InsuranceNum_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

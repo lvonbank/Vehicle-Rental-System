@@ -1,0 +1,235 @@
+USE VehicleRental;
+
+-- ---------------------
+-- Populate Vehicle table
+-- ---------------------
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('1HGBH41JXMN109186', '1996-1-01', 'Honda', 'Civic si', '56000', 'Compact', 'FWD', '1.00', '192848720');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('2HGBH61JXMN109145', '2010-1-01', 'Chevrolet', 'Silverado', '148000', 'Truck', '4WD', '2.50', '637283740');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('3JCBH61JXMN102545', '2000-1-01', 'Ford', 'Focus', '8000', 'Compact', 'FWD', '0.99', '545278495');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('4JCBH61JXMN102545', '2013-1-01', 'Ford', 'Explorer', '88100', 'SUV', '4WD', '4.07', '886594030');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('5HKYU61DXMN215967', '2009-1-01', 'Hyundai', 'Santa Fe', '100100', 'SUV', 'AWD', '4.55', '977463532');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('6LKYU61DXMN455735', '2016-1-01', 'Honda', 'Pilot', '42898', 'SUV', 'AWD', '3.40', '657348476');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('7UTYU61DXMN215638', '2015-1-01', 'Toyota', 'RAV4', '65990', 'SUV', 'AWD', '2.32', '867464956');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('8YTYU61DXMN879967', '2014-1-01', 'Ford', 'Mustang', '178095', 'Compact', 'FWD', '6.10', '756483848');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('9YTYU61GHMN267961', '2017-1-01', 'Ford', 'Taurus', '10000', 'Midsize', 'FWD', '2.85', '875645372');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('10ILU61DXMN215675', '2010-1-01', 'Jeep', 'Wrangler', '99100', 'Midsize', '4WD', '5.55', '657483945');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('11KYU61DXMN215875', '2011-1-01', 'Dodge', 'RAM', '6100', 'Truck', '4WD', '3.99', '768475745');
+INSERT INTO Vehicle(VIN, Year, Make, Model, Mileage, Type, DriveTrain, CostPerMile, RegistrationNum)
+VALUES('12BLN54HLKI324967', '2012-1-01', 'Kia', 'Forte', '7000', 'Compact', 'FWD', '4.22', '879568654');
+
+-- ---------------------
+-- Populate Address table
+-- ---------------------
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('1', '105 Bunting Ln', 'Mankato', 'MN', 'US', '56001');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('2', '4573 Old Carriage Road', 'Shakopee', 'MN', 'US', '55379');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('3', '612 Elm Street', 'Belle Plaine', 'MN', 'US', '56011');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('4', '101 Lookout Drive', 'Mankato', 'MN', 'US', '56001');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('5','5643 Feugiat. St.','Gresham','OR','US','40046');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('6','4169 Mi Road','South Bend','IN','US','94731');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('7','250-672 Mollis Road','New Haven','CT','US','83771');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('8','4844 Ac Rd.','Indianapolis','IN','US','38252');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('9','6921 Proin Rd.','Hillsboro', 'OR', 'US','95746');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('10','5444 Commodo Av.','Broken Arrow','OK','US','16993');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('11','123 Fake Street','Fridly','MN','US','56789');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('12','507 Lake Street','Brookings','ND','US','76454');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('13','711 Henery Ave.','Andover','CT','US','15684');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('14','25374 Dakota Rd.','Clayton','NM','US','88415');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('15','670 Fun Circle','Albany','CA','US','90010');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('16','345 State St.','Orlando','FL','US','16993');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('17','145 Hill St.','Abbeville','MS','US','49595');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('18','7899 Hidden Way','Dallas','TX','US','16993');
+INSERT INTO Address(Address_ID, Street, City, Region, Country, Zip)
+VALUES('19','767 Founders Ave.','Afton','WY','US','16993');
+
+-- ------------------------
+-- Populate Discount table
+-- ------------------------
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('1', '0.00');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('2', '0.10');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('3', '0.20');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('4', '0.30');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('5', '0.40');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('6', '0.50');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('7', '0.60');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('8', '0.70');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('9', '0.80');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('10', '0.90');
+INSERT INTO Discount(Discount_ID, Discount)
+VALUES('11', '1.00');
+
+-- -------------------------
+-- Populate Customer table
+-- -------------------------
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('1', 'Alec', 'Daniel', 'Vosika', 'Single', 'Male', '1996-4-27', 'Alecvosika@comcaast.net', '9522884914', '1', '1', 'W192839057381', '123456789');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('2', 'Levi', 'Todd', 'VonBank', 'Single', 'Male', '1996-7-28', 'levi.vonbank@mnsu.edu', '9528736423', '3', '3', 'HE736B53428TB', '758627384');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('3', 'Jill', 'Marry', 'Smith', 'Married', 'Female', '1965-8-02', 'jill@gmail.com', '7615469876', '5', '3', 'YET64562H354J', '757463657');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('4', 'Berry', 'Jake', 'Smith', 'Married', 'Male', '1966-1-01', 'smithdoesitall@outlook.com', '7615465363', '2', '3', 'JE736B53428TB', '635485943');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('5', 'Mathias', 'Isiquemen', 'Ukpoma', 'Single', 'Male', '1993-1-19', 'mathias.ukpoma@mnsu.edu', '5073517489', '1', '4', 'KB645C62137HC', '478965478');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('6', 'Kelvin', 'Parsneau', 'Ahmed', 'Single', 'Male', '1988-3-14', 'kelvinparsneau@yahoo.com', '5879652150', '2', '5', 'DC524B54258LD', '589213254');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('7', 'Ishrat', 'Muyiwa', 'Abdulsalam', 'Married', 'Female', '1985-6-24', 'ishrat@yahoo.com', '654128792', '4', '6', 'FD425BC4387CD', '236587411');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('8', 'Tobi', 'Makande', 'Ajimobi', 'Married', 'Male', '1993-4-30', 'tobi@yahoo.com', '556987412', '5', '7', 'HG980DK8876HU', '889745123');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('9', 'Tom', 'Daniel', 'Allen', 'Married', 'Male', '1991-4-27', 'tom@gmail.com', '567834567', '1', '6', 'KJ890FG6678KG', '776567870');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('10', 'kelly', 'Emmanuel', 'kropifko', 'Single', 'Male', '1990-2-13', 'kelly@hotmail.com', '543567890', '2', '9', 'JK556HG7789LK', '445897410');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('11', 'Lovett', 'Peace', 'Marvin', 'Married', 'Female', '1986-10-21', 'lovett@hotmail.com', '544124534', '3', '7', 'DA556HG5567IK', '223456234');
+INSERT INTO Customer(Cust_ID, FirstName, MiddleName, LastName, Status, Gender, DOB, Email, PhoneNum, Discount_ID, Address_ID, LicenceNum, InsuranceNum)
+VALUES('12', 'Abraham', 'Moses', 'Justine', 'Single', 'Male', '1994-1-12', 'abraham@gmail.com', '675439078', '4', '7', 'LJ667GT5543MN', '564216890');
+
+
+-- ---------------------
+-- Populate Location table
+-- ---------------------
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('1', '9524854915', '2');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('2', '5589741523', '8');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('3', '4458793254', '10');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('4', '9875436797', '11');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('5', '5874412569', '12');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('6', '3698745215', '13');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('7', '4872541236', '14');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('8', '5879652153', '15');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('9', '2587463251', '16');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('10', '6698745213', '17');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('11', '1147896523', '18');
+INSERT INTO Location(Location_ID, PhoneNum, Address_ID)
+VALUES('12', '2548879652', '19');
+
+
+-- ---------------------
+-- Populate InStock table
+-- ---------------------
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('1HGBH41JXMN109186', '1', 'No');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('2HGBH61JXMN109145', '1', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('3JCBH61JXMN102545', '1', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('4JCBH61JXMN102545', '1', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('5HKYU61DXMN215967', '1', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('6LKYU61DXMN455735', '1', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('7UTYU61DXMN215638', '1', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('8YTYU61DXMN879967', '11', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('9YTYU61GHMN267961', '12', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('10ILU61DXMN215675', '3', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('11KYU61DXMN215875', '3', 'Yes');
+INSERT INTO InStock(VIN, Location_ID, Avalible)
+VALUES('12BLN54HLKI324967', '3', 'Yes');
+
+-- --------------------
+-- Populate Billing table
+-- --------------------
+INSERT INTO Billing(Bill_ID, TotalAmount, BillDate, BillStatus, AmountTax, AmountBalance, AmountAdvance, Discount_ID, Cust_ID, Location_ID)
+VALUES('1', '28.54', '2017-4-30', 'Paid', '3.54', '45.00', '20.00', '1', '1', '1');
+INSERT INTO Billing(Bill_ID, TotalAmount, BillDate, BillStatus, AmountTax, AmountBalance, AmountAdvance, Discount_ID, Cust_ID, Location_ID)
+VALUES('2', '157.13', '2017-6-29', 'Pending', '14.03', '178.10', '35.00', '1', '2', '1');
+INSERT INTO Billing(Bill_ID, TotalAmount, BillDate, BillStatus, AmountTax, AmountBalance, AmountAdvance, Discount_ID, Cust_ID, Location_ID)
+VALUES('3', '215.74', '2018-2-04', 'Refunded', '15.75', '199.99', '0.00', '1', '4', '1');
+INSERT INTO Billing(Bill_ID, TotalAmount, BillDate, BillStatus, AmountTax, AmountBalance, AmountAdvance, Discount_ID, Cust_ID, Location_ID)
+VALUES('4', '169.18', '2018-3-14', 'Paid', '12.34', '156.84', '22.00', '1', '2', '2');
+INSERT INTO Billing(Bill_ID, TotalAmount, BillDate, BillStatus, AmountTax, AmountBalance, AmountAdvance, Discount_ID, Cust_ID, Location_ID)
+VALUES('5', '220.77', '2017-12-12', 'Pending', '20.00', '200.77', '0.00', '2', '3', '10');
+INSERT INTO Billing(Bill_ID, TotalAmount, BillDate, BillStatus, AmountTax, AmountBalance, AmountAdvance, Discount_ID, Cust_ID, Location_ID)
+VALUES('6', '39.11', '2018-02-17', 'Paid', '34.23', '50.00', '45.12', '2', '3', '11');
+INSERT INTO Billing(Bill_ID, TotalAmount, BillDate, BillStatus, AmountTax, AmountBalance, AmountAdvance, Discount_ID, Cust_ID, Location_ID)
+VALUES('7', '57.02', '2018-01-11', 'Paid', '2.45', '66.57', '12.00', '1', '1', '3');
+INSERT INTO Billing(Bill_ID, TotalAmount, BillDate, BillStatus, AmountTax, AmountBalance, AmountAdvance, Discount_ID, Cust_ID, Location_ID)
+VALUES('8', '13.46', '2017-09-11', 'Paid', '34.56', '23.90', '45.00', '1', '1', '1');
+
+-- ---------------------
+-- Populate Booking table
+-- ---------------------
+INSERT INTO Booking(Book_ID, StartDate, EndDate, SecurityDeposit, BookStatus, VIN, Bill_ID)
+VALUES('1', '2017-4-20', '2017-4-26', '10.00', 'Active', '1HGBH41JXMN109186', '1');
+INSERT INTO Booking(Book_ID, StartDate, EndDate, SecurityDeposit, BookStatus, VIN, Bill_ID)
+VALUES('2', '2019-1-07', '2019-1-08', '35.00', 'Reserved', '4JCBH61JXMN102545', '2');
+INSERT INTO Booking(Book_ID, StartDate, EndDate, SecurityDeposit, BookStatus, VIN, Bill_ID)
+VALUES('3', '2020-1-01', '2020-2-12', '0.00', 'Cancelled', '2HGBH61JXMN109145', '3');
+INSERT INTO Booking(Book_ID, StartDate, EndDate, SecurityDeposit, BookStatus, VIN, Bill_ID)
+VALUES('4', '2015-2-03', '2015-3-03', '0.00', 'Complete', '5HKYU61DXMN215967', '5');
+INSERT INTO Booking(Book_ID, StartDate, EndDate, SecurityDeposit, BookStatus, VIN, Bill_ID)
+VALUES('5', '2017-1-28', '2017-2-7', '0.00', 'Complete', '8YTYU61DXMN879967', '4');
+INSERT INTO Booking(Book_ID, StartDate, EndDate, SecurityDeposit, BookStatus, VIN, Bill_ID)
+VALUES('6', '2016-11-30', '2016-12-04', '0.00', 'Complete', '8YTYU61DXMN879967', '6');
+INSERT INTO Booking(Book_ID, StartDate, EndDate, SecurityDeposit, BookStatus, VIN, Bill_ID)
+VALUES('7', '2017-6-07', '2017-8-12', '0.00', 'Complete', '10ILU61DXMN215675', '8');
+INSERT INTO Booking(Book_ID, StartDate, EndDate, SecurityDeposit, BookStatus, VIN, Bill_ID)
+VALUES('8', '2017-7-09', '2017-8-15', '0.00', 'Complete', '12BLN54HLKI324967', '7');
+
+-- ----------------------
+-- Populate Payment table
+-- ----------------------
+INSERT INTO Payment(Payment_ID, PaymentType, TransactionNum, Cust_ID, Bill_ID)
+VALUES('1', 'Cash', '123456', '1', '1');
+INSERT INTO Payment(Payment_ID, PaymentType, TransactionNum, Cust_ID, Bill_ID)
+VALUES('2', 'Credit', '123457', '2', '4');
+INSERT INTO Payment(Payment_ID, PaymentType, TransactionNum, Cust_ID, Bill_ID)
+VALUES('3', 'Cash', '123458', '1', '7');
+INSERT INTO Payment(Payment_ID, PaymentType, TransactionNum, Cust_ID, Bill_ID)
+VALUES('4', 'Debit', '123459', '1', '8');

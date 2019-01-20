@@ -1,0 +1,57 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">Details found: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$Book_ID_class}">{$label booking Book_ID}</th>
+			<th class="{$StartDate_class}">{$label booking StartDate}</th>
+			<th class="{$EndDate_class}">{$label booking EndDate}</th>
+			<th class="{$SecurityDeposit_class}">{$label booking SecurityDeposit}</th>
+			<th class="{$BookStatus_class}">{$label booking BookStatus}</th>
+			<th class="{$VIN_class}">{$label booking VIN}</th>
+			<th class="{$Bill_ID_class}">{$label booking Bill_ID}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$Book_ID_class}">{$Book_ID_value}</td>
+			<td class="{$StartDate_class}">{$StartDate_value}</td>
+			<td class="{$EndDate_class}">{$EndDate_value}</td>
+			<td class="{$SecurityDeposit_class}">{$SecurityDeposit_value}</td>
+			<td class="{$BookStatus_class}">{$BookStatus_value}</td>
+			<td class="{$VIN_class}">{$VIN_value}</td>
+			<td class="{$Bill_ID_class}">{$Bill_ID_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

@@ -1,0 +1,42 @@
+<p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
+<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p><div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel revenue_by_location masterrprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$Location_ID_class}">{$label revenue_by_location Location_ID}</th>
+			<th class="{$Revenue_By_Location_class}">{$label revenue_by_location Revenue_By_Location}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$Location_ID_class}">{$Location_ID_mastervalue}</td>
+			<td class="{$Revenue_By_Location_class}">{$Revenue_By_Location_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

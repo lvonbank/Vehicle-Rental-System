@@ -1,0 +1,55 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">Back to {$backtomasterlink_caption}</a><span>{$pagetitlelabel location masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=Location_ID]:before {
+		content: "{$label location Location_ID}";
+	}
+	.bs-gridcell[data-field=PhoneNum]:before {
+		content: "{$label location PhoneNum}";
+	}
+	.bs-gridcell[data-field=Address_ID]:before {
+		content: "{$label location Address_ID}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$Location_ID_class}">{$label location Location_ID}</th>
+			<th class="{$PhoneNum_class}">{$label location PhoneNum}</th>
+			<th class="{$Address_ID_class}">{$label location Address_ID}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$Location_ID_class} bs-gridcell" data-field=Location_ID>{$Location_ID_mastervalue}</td>
+			<td class="{$PhoneNum_class} bs-gridcell" data-field=PhoneNum>{$PhoneNum_mastervalue}</td>
+			<td class="{$Address_ID_class} bs-gridcell" data-field=Address_ID>{$Address_ID_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

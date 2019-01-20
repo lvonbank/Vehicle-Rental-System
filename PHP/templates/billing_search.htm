@@ -1,0 +1,329 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel billing search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN Bill_ID_fieldblock}		
+	<div class="container {$fielddispclass_Bill_ID}" data-fieldname="Bill_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Bill_ID}">
+				{$label billing Bill_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Bill_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Bill_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Bill_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Bill_ID_fieldblock}
+	{BEGIN TotalAmount_fieldblock}		
+	<div class="container {$fielddispclass_TotalAmount}" data-fieldname="TotalAmount">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_TotalAmount}">
+				{$label billing TotalAmount}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_TotalAmount}
+			</div>
+			<div class="col-md-4" >
+				{$TotalAmount_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TotalAmount_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TotalAmount_fieldblock}
+	{BEGIN BillDate_fieldblock}		
+	<div class="container {$fielddispclass_BillDate}" data-fieldname="BillDate">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_BillDate}">
+				{$label billing BillDate}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_BillDate}
+			</div>
+			<div class="col-md-4" >
+				{$BillDate_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BillDate_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BillDate_fieldblock}
+	{BEGIN BillStatus_fieldblock}		
+	<div class="container {$fielddispclass_BillStatus}" data-fieldname="BillStatus">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_BillStatus}">
+				{$label billing BillStatus}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_BillStatus}
+			</div>
+			<div class="col-md-4" >
+				{$BillStatus_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$BillStatus_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END BillStatus_fieldblock}
+	{BEGIN AmountTax_fieldblock}		
+	<div class="container {$fielddispclass_AmountTax}" data-fieldname="AmountTax">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_AmountTax}">
+				{$label billing AmountTax}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_AmountTax}
+			</div>
+			<div class="col-md-4" >
+				{$AmountTax_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$AmountTax_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END AmountTax_fieldblock}
+	{BEGIN AmountBalance_fieldblock}		
+	<div class="container {$fielddispclass_AmountBalance}" data-fieldname="AmountBalance">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_AmountBalance}">
+				{$label billing AmountBalance}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_AmountBalance}
+			</div>
+			<div class="col-md-4" >
+				{$AmountBalance_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$AmountBalance_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END AmountBalance_fieldblock}
+	{BEGIN AmountAdvance_fieldblock}		
+	<div class="container {$fielddispclass_AmountAdvance}" data-fieldname="AmountAdvance">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_AmountAdvance}">
+				{$label billing AmountAdvance}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_AmountAdvance}
+			</div>
+			<div class="col-md-4" >
+				{$AmountAdvance_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$AmountAdvance_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END AmountAdvance_fieldblock}
+	{BEGIN Discount_ID_fieldblock}		
+	<div class="container {$fielddispclass_Discount_ID}" data-fieldname="Discount_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Discount_ID}">
+				{$label billing Discount_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Discount_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Discount_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Discount_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Discount_ID_fieldblock}
+	{BEGIN Cust_ID_fieldblock}		
+	<div class="container {$fielddispclass_Cust_ID}" data-fieldname="Cust_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Cust_ID}">
+				{$label billing Cust_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Cust_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Cust_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Cust_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Cust_ID_fieldblock}
+	{BEGIN Location_ID_fieldblock}		
+	<div class="container {$fielddispclass_Location_ID}" data-fieldname="Location_ID">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_Location_ID}">
+				{$label billing Location_ID}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_Location_ID}
+			</div>
+			<div class="col-md-4" >
+				{$Location_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Location_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Location_ID_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

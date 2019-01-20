@@ -1,0 +1,415 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel customer add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN Cust_ID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Cust_ID}" data-fieldname="Cust_ID" data-signal-error-for="Cust_ID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Cust_ID}">
+		{BEGIN Cust_ID_label}{$label customer Cust_ID}{END Cust_ID_label}
+	</label>
+	<div class="col-md-6" >
+		{$Cust_ID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Cust_ID">
+		<div class="text-muted" >
+		{$tooltip customer Cust_ID}
+		</div>
+	</div>
+</div>
+</div>
+{END Cust_ID_fieldblock}
+
+			{BEGIN FirstName_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_FirstName}" data-fieldname="FirstName" data-signal-error-for="FirstName{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_FirstName}">
+		{BEGIN FirstName_label}{$label customer FirstName}{END FirstName_label}
+	</label>
+	<div class="col-md-6" >
+		{$FirstName_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="FirstName">
+		<div class="text-muted" >
+		{$tooltip customer FirstName}
+		</div>
+	</div>
+</div>
+</div>
+{END FirstName_fieldblock}
+
+			{BEGIN MiddleName_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_MiddleName}" data-fieldname="MiddleName" data-signal-error-for="MiddleName{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_MiddleName}">
+		{BEGIN MiddleName_label}{$label customer MiddleName}{END MiddleName_label}
+	</label>
+	<div class="col-md-6" >
+		{$MiddleName_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="MiddleName">
+		<div class="text-muted" >
+		{$tooltip customer MiddleName}
+		</div>
+	</div>
+</div>
+</div>
+{END MiddleName_fieldblock}
+
+			{BEGIN LastName_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LastName}" data-fieldname="LastName" data-signal-error-for="LastName{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LastName}">
+		{BEGIN LastName_label}{$label customer LastName}{END LastName_label}
+	</label>
+	<div class="col-md-6" >
+		{$LastName_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LastName">
+		<div class="text-muted" >
+		{$tooltip customer LastName}
+		</div>
+	</div>
+</div>
+</div>
+{END LastName_fieldblock}
+
+			{BEGIN Status_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Status}" data-fieldname="Status" data-signal-error-for="Status{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Status}">
+		{BEGIN Status_label}{$label customer Status}{END Status_label}
+	</label>
+	<div class="col-md-6" >
+		{$Status_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Status">
+		<div class="text-muted" >
+		{$tooltip customer Status}
+		</div>
+	</div>
+</div>
+</div>
+{END Status_fieldblock}
+
+			{BEGIN Gender_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Gender}" data-fieldname="Gender" data-signal-error-for="Gender{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Gender}">
+		{BEGIN Gender_label}{$label customer Gender}{END Gender_label}
+	</label>
+	<div class="col-md-6" >
+		{$Gender_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Gender">
+		<div class="text-muted" >
+		{$tooltip customer Gender}
+		</div>
+	</div>
+</div>
+</div>
+{END Gender_fieldblock}
+
+			{BEGIN DOB_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DOB}" data-fieldname="DOB" data-signal-error-for="DOB{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DOB}">
+		{BEGIN DOB_label}{$label customer DOB}{END DOB_label}
+	</label>
+	<div class="col-md-6" >
+		{$DOB_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DOB">
+		<div class="text-muted" >
+		{$tooltip customer DOB}
+		</div>
+	</div>
+</div>
+</div>
+{END DOB_fieldblock}
+
+			{BEGIN Email_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Email}" data-fieldname="Email" data-signal-error-for="Email{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Email}">
+		{BEGIN Email_label}{$label customer Email}{END Email_label}
+	</label>
+	<div class="col-md-6" >
+		{$Email_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Email">
+		<div class="text-muted" >
+		{$tooltip customer Email}
+		</div>
+	</div>
+</div>
+</div>
+{END Email_fieldblock}
+
+			{BEGIN PhoneNum_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PhoneNum}" data-fieldname="PhoneNum" data-signal-error-for="PhoneNum{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PhoneNum}">
+		{BEGIN PhoneNum_label}{$label customer PhoneNum}{END PhoneNum_label}
+	</label>
+	<div class="col-md-6" >
+		{$PhoneNum_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PhoneNum">
+		<div class="text-muted" >
+		{$tooltip customer PhoneNum}
+		</div>
+	</div>
+</div>
+</div>
+{END PhoneNum_fieldblock}
+
+			{BEGIN Discount_ID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Discount_ID}" data-fieldname="Discount_ID" data-signal-error-for="Discount_ID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Discount_ID}">
+		{BEGIN Discount_ID_label}{$label customer Discount_ID}{END Discount_ID_label}
+	</label>
+	<div class="col-md-6" >
+		{$Discount_ID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Discount_ID">
+		<div class="text-muted" >
+		{$tooltip customer Discount_ID}
+		</div>
+	</div>
+</div>
+</div>
+{END Discount_ID_fieldblock}
+
+			{BEGIN Address_ID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Address_ID}" data-fieldname="Address_ID" data-signal-error-for="Address_ID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Address_ID}">
+		{BEGIN Address_ID_label}{$label customer Address_ID}{END Address_ID_label}
+	</label>
+	<div class="col-md-6" >
+		{$Address_ID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Address_ID">
+		<div class="text-muted" >
+		{$tooltip customer Address_ID}
+		</div>
+	</div>
+</div>
+</div>
+{END Address_ID_fieldblock}
+
+			{BEGIN LicenceNum_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_LicenceNum}" data-fieldname="LicenceNum" data-signal-error-for="LicenceNum{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_LicenceNum}">
+		{BEGIN LicenceNum_label}{$label customer LicenceNum}{END LicenceNum_label}
+	</label>
+	<div class="col-md-6" >
+		{$LicenceNum_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="LicenceNum">
+		<div class="text-muted" >
+		{$tooltip customer LicenceNum}
+		</div>
+	</div>
+</div>
+</div>
+{END LicenceNum_fieldblock}
+
+			{BEGIN InsuranceNum_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_InsuranceNum}" data-fieldname="InsuranceNum" data-signal-error-for="InsuranceNum{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_InsuranceNum}">
+		{BEGIN InsuranceNum_label}{$label customer InsuranceNum}{END InsuranceNum_label}
+	</label>
+	<div class="col-md-6" >
+		{$InsuranceNum_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="InsuranceNum">
+		<div class="text-muted" >
+		{$tooltip customer InsuranceNum}
+		</div>
+	</div>
+</div>
+</div>
+{END InsuranceNum_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reset</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Back to list</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancel</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

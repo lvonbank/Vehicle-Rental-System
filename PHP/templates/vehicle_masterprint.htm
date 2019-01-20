@@ -1,0 +1,55 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel vehicle masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$VIN_class}">{$label vehicle VIN}</th>
+			<th class="{$Year_class}">{$label vehicle Year}</th>
+			<th class="{$Make_class}">{$label vehicle Make}</th>
+			<th class="{$Model_class}">{$label vehicle Model}</th>
+			<th class="{$Mileage_class}">{$label vehicle Mileage}</th>
+			<th class="{$Type_class}">{$label vehicle Type}</th>
+			<th class="{$DriveTrain_class}">{$label vehicle DriveTrain}</th>
+			<th class="{$CostPerMile_class}">{$label vehicle CostPerMile}</th>
+			<th class="{$RegistrationNum_class}">{$label vehicle RegistrationNum}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$VIN_class}">{$VIN_mastervalue}</td>
+			<td class="{$Year_class}">{$Year_mastervalue}</td>
+			<td class="{$Make_class}">{$Make_mastervalue}</td>
+			<td class="{$Model_class}">{$Model_mastervalue}</td>
+			<td class="{$Mileage_class}">{$Mileage_mastervalue}</td>
+			<td class="{$Type_class}">{$Type_mastervalue}</td>
+			<td class="{$DriveTrain_class}">{$DriveTrain_mastervalue}</td>
+			<td class="{$CostPerMile_class}">{$CostPerMile_mastervalue}</td>
+			<td class="{$RegistrationNum_class}">{$RegistrationNum_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

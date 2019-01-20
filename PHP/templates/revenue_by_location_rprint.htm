@@ -1,0 +1,240 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel revenue_by_location rprint}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+
+{BEGIN grid_block}
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_2{background-color: #ADD8E6;}
+		td.nbgroup_2{background-color: #ADD8E6;}
+		td.header_2 {
+			background-color: #93B7C3; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:120%;
+/*		padding: 4px 8px;*/
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	td.blackshade {
+		border-bottom:solid #808080 1px; 
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+						<table {$report_print_hiddenattr} data-pageid="{$pageid}" data-brick="report_print" class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
+<tbody>
+				
+					
+					
+													
+											
+					
+					
+													
+											
+
+				{BEGIN grid_row}
+				<!-------------------------------------  group headers ----------------------------------------->
+				{BEGIN Location_ID_newgroup}
+				<tr class="group-spliter-1" >
+											<td class=header_1 colspan=3>
+						{$label revenue_by_location Location_ID}:&nbsp;
+						<font style="font-weight:900">
+							{$Location_ID_grval}
+													</font>
+					</td>
+				</tr>
+								{END Location_ID_newgroup}
+				{BEGIN Revenue_By_Location_newgroup}
+				<tr class="group-spliter-2" >
+					<td class=group_1>&nbsp;</td>
+											<td class=header_2 colspan=2>
+						{$label revenue_by_location Revenue_By_Location}:&nbsp;
+						<font style="font-weight:900">
+							{$Revenue_By_Location_grval}
+																								
+			{BEGIN dtables_link}
+		
+							
+				
+								<a {$dtables_link_attrs}  title="Show details">
+				<span class="badge booking_badge" {$booking_childnumber_attr}>
+					<span class="glyphicon glyphicon-th-list"></span> 
+					<span class="{$booking_cntspan_class}" >{$booking_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+						</font>
+					</td>
+				</tr>
+								<tr class="group-headers">
+				<td class=group_1>&nbsp;</td>
+				<td class=group_2>&nbsp;</td>
+				</tr>
+				{END Revenue_By_Location_newgroup}
+								<!-------------------------------------  data ----------------------------------------->
+				{BEGIN row_data}
+				<tr {$rowattrs}>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+				</tr>
+				{END row_data}
+				<!-------------------------------------  group summary ----------------------------------------->
+								{BEGIN Revenue_By_Location_endgroup}
+				<tr class="summaryrow" >
+					<td style="border-top: none;" class="group_1"></td>
+										<td class=group_2 colspan=2 >
+					Summary for {$label revenue_by_location Revenue_By_Location} {$Revenue_By_Location_grval}
+					 - <span class="summary-2" data-type="summary" data-value="{$groupRevenue_By_Location_total_cnt}">{$groupRevenue_By_Location_total_cnt}</span> records total</td>
+				</tr>
+																				{END Revenue_By_Location_endgroup}
+								{BEGIN Location_ID_endgroup}
+				<tr class="summaryrow" >
+										<td class=group_1 colspan=3 >
+					Summary for {$label revenue_by_location Location_ID} {$Location_ID_grval}
+					 - <span class="summary-1" data-type="summary" data-value="{$groupLocation_ID_total_cnt}">{$groupLocation_ID_total_cnt}</span> records total</td>
+				</tr>
+																				{END Location_ID_endgroup}
+				{END grid_row}
+												</tbody>
+</table>
+</div>
+{END grid_block}
+
+
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
