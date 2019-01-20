@@ -1,4 +1,4 @@
-# VehicleRental-Software
+# VehicleRental-System
 
 Design a database for a car rental company. The company has multiple locations, and each location offers different car types (such as compact cars, midsize cars, SUVs, etc.) at different rental charge per day. The database should be able to keep track of customers, vehicle rented, and the rental payments. It should also keep track of vehicles, their make, and mileage.  Make assumptions about business rules as necessary. Provide your assumptions.
 1. Create an ERD (Crow’s Foot notation) for the database.
